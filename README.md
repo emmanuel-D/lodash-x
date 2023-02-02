@@ -1,17 +1,17 @@
-#🚀 LodashX
+# 🚀 LodashX
 
 **LodashX** is a small collection of utility functions for JavaScript and TypeScript projects. The library is designed to make it easier to perform common operations on arrays and objects.
 
 ℹ️ Some functions in the library are based on Lodash, hence, it is required to install Lodash as a dependency.
 
-##📦 Installation
+## 📦 Installation
 You can install **LodashX** by using npm:
 
 ```
 npm i lodash-x
 ```
 
-##💡 Usage
+## 💡 Usage
 To use LodashX in your project, simply import the functions you need. For example:
 
 ###Javascript
@@ -49,7 +49,7 @@ console.log(array);
 
 ````
 
-##📚 API Reference
+## 📚 API Reference
 
 ### `updateOrAddItemToArray`
 Updates an existing item in an array or adds it if it doesn't exist.
@@ -129,12 +129,12 @@ console.log(randomString);
 // Output: "abcd-g13d-93fb"
 ```
 
-##🙌 Contributing
+## 🙌 Contributing
 If you have any suggestions for improving LodashX or if you found a bug, please don't hesitate to open an issue. Contributions are welcome!
 
 Special thanks to everyone who has contributed to this project!
 
 [![Emmanuel Dadem](https://avatars.githubusercontent.com/u/37305687?s=80&v=4)](https://github.com/emmanuel-D)
 
-##🎉 License
+## 🎉 License
 **LodashX** is open source and licensed under the MIT license.
