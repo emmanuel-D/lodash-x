@@ -101,7 +101,51 @@ console.log(updatedArray);
 //  {id: 2, name: "Jane Doe"},
 //  {id: 3, name: "Jack Doe"}
 // ]
-
+```
+___
+### `removeItemFromArrayAtIndex`
+Removes an item at given index and returns a copy of the array without the removed item.
+```
+removeItemFromArrayAtIndex<T>(array: T[], index: number): T[]
+```
+Example
+```javascript
+const arr = [1, 2, 3, 4];
+const removedArr = removeItemFromArrayAtIndex(arr, 2);  
+console.log(removedArr);  
+// Output: [1, 2, 4]
+```
+___
+### `doesArrayContainsOneOrMore`
+Check if the given array contains one or more primitive elements that are equal to the primitive elements given as a second parameter. This implementation is more performant than using Array.every or Array.some as it uses a loop instead of a higher order function.
+```
+doesArrayContainsOneOrMore<T>(array: (string | number)[], elements: (string | number)[]): boolean
+```
+Example
+```javascript
+const fruits = ['apple', 'banana', 'orange'];
+const elements = ['apple', 'pear'];
+console.log(containsAny(fruits, elements));
+// Output: true
+```
+___
+### `doesArrayContainsOneOrMoreObjects`
+Check if an array of objects contains one or more elements based on a specific property.
+```
+doesArrayContainsOneOrMoreObjects<T>(
+    array: T[],
+    elements: T[],
+    keyToCompare: keyof T
+): boolean
+```
+Example
+```javascript
+const array = [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }, { id: 3, name: 'Jim' }];
+const elements = [{ id: 2, name: 'Jane' }, { id: 4, name: 'Jessica' }];  
+const keyToCompare = 'id';  
+const result = containsOneOrMoreObjects(array, elements, keyToCompare); 
+console.log(result); 
+// Output: true
 ```
 ___
 
@@ -128,6 +172,7 @@ const randomString = generateRandomStringWithSections(3, 4);
 console.log(randomString);
 // Output: "abcd-g13d-93fb"
 ```
+___
 
 ## 🙌 Contributing
 If you have any suggestions for improving LodashX or if you found a bug, please don't hesitate to open an issue. Contributions are welcome!

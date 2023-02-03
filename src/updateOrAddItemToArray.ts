@@ -1,4 +1,5 @@
-import _ from "lodash";
+import _get from "lodash.get";
+
 
 /**
  * The `updateOrAddItemToArray` function is a utility function that allows you to update an item in an array or add a new item to the array, based on a specified search property. The function takes in three parameters:
@@ -57,9 +58,9 @@ export function updateOrAddItemToArray<T>(
     item: T,
     searchPropertyKey: (string | keyof T) = 'id'
 ): T[] {
-    const index = array.find(item => _.get(item, searchPropertyKey) === _.get(item, searchPropertyKey));
-    if (index) {
-        array[array.indexOf(index)] = {...item};
+    const index = array.findIndex(x => _get(x, searchPropertyKey) === _get(item, searchPropertyKey));
+    if (index !== -1) {
+        array[index] = {...item};
         return array;
     } else {
         return [...array, item];

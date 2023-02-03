@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateOrAddItemToArray = void 0;
-const lodash_1 = __importDefault(require("lodash"));
+const lodash_get_1 = __importDefault(require("lodash.get"));
 /**
  * The `updateOrAddItemToArray` function is a utility function that allows you to update an item in an array or add a new item to the array, based on a specified search property. The function takes in three parameters:
  *
@@ -58,9 +58,9 @@ const lodash_1 = __importDefault(require("lodash"));
  * @param searchPropertyKey
  */
 function updateOrAddItemToArray(array, item, searchPropertyKey = 'id') {
-    const index = array.find(item => lodash_1.default.get(item, searchPropertyKey) === lodash_1.default.get(item, searchPropertyKey));
-    if (index) {
-        array[array.indexOf(index)] = { ...item };
+    const index = array.findIndex(x => (0, lodash_get_1.default)(x, searchPropertyKey) === (0, lodash_get_1.default)(item, searchPropertyKey));
+    if (index !== -1) {
+        array[index] = { ...item };
         return array;
     }
     else {
