@@ -5,6 +5,8 @@ import { generateRandomStringWithSections } from "./generateRandomStringWithSect
 import { removeItemFromArrayAtIndex } from "./removeItemFromArrayAtIndex";
 import { doesArrayContainsOneOrMore } from "./doesArrayContainsOneOrMore";
 import { doesArrayContainsOneOrMoreObjects } from "./doesArrayContainsOneOrMoreObjects";
+import { generateRandomNumber } from "./generateRandomNumber";
+import { getRandomItemInArray } from "./getRandomItemInArray";
 export { updateOrAddItemToArray };
 export { updateOrAddItemListToArray };
 export { generateRandomAlphaNumericString };
@@ -12,6 +14,8 @@ export { generateRandomStringWithSections };
 export { removeItemFromArrayAtIndex };
 export { doesArrayContainsOneOrMore };
 export { doesArrayContainsOneOrMoreObjects };
+export { generateRandomNumber };
+export { getRandomItemInArray };
 declare const _x: {
     updateOrAddItemToArray: typeof updateOrAddItemToArray;
     updateOrAddItemListToArray: typeof updateOrAddItemListToArray;
@@ -20,5 +24,7 @@ declare const _x: {
     removeItemFromArrayAtIndex: typeof removeItemFromArrayAtIndex;
     doesArrayContainsOneOrMore: typeof doesArrayContainsOneOrMore;
     doesArrayContainsOneOrMoreObjects: typeof doesArrayContainsOneOrMoreObjects;
+    generateRandomNumber: typeof generateRandomNumber;
+    getRandomItemInArray: typeof getRandomItemInArray;
 };
 export default _x;

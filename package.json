@@ -22,18 +22,28 @@
     "lodash.get": "^4.4.2"
   },
   "keywords": [
-    "TypeScript",
+    "Lodash-X",
+    "lodash-x",
+    "LodashX",
+    "lodashx",
+    "_x",
+    "x",
     "utility",
     "functions",
     "library",
     "Lodash",
-    "LodashX",
     "random strings",
+    "random",
+    "random number",
+    "random item array",
+    "random item",
+    "array",
     "uuid",
     "id generator",
     "array manipulation",
     "object manipulation",
-    "data manipulation"
+    "data manipulation",
+    "TypeScript"
   ],
   "devDependencies": {
     "@types/lodash.get": "^4.4.7",

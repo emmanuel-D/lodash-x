@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.doesArrayContainsOneOrMoreObjects = exports.doesArrayContainsOneOrMore = exports.removeItemFromArrayAtIndex = exports.generateRandomStringWithSections = exports.generateRandomAlphaNumericString = exports.updateOrAddItemListToArray = exports.updateOrAddItemToArray = void 0;
+exports.getRandomItemInArray = exports.generateRandomNumber = exports.doesArrayContainsOneOrMoreObjects = exports.doesArrayContainsOneOrMore = exports.removeItemFromArrayAtIndex = exports.generateRandomStringWithSections = exports.generateRandomAlphaNumericString = exports.updateOrAddItemListToArray = exports.updateOrAddItemToArray = void 0;
 const updateOrAddItemToArray_1 = require("./updateOrAddItemToArray");
 Object.defineProperty(exports, "updateOrAddItemToArray", { enumerable: true, get: function () { return updateOrAddItemToArray_1.updateOrAddItemToArray; } });
 const updateOrAddItemListToArray_1 = require("./updateOrAddItemListToArray");
@@ -15,6 +15,10 @@ const doesArrayContainsOneOrMore_1 = require("./doesArrayContainsOneOrMore");
 Object.defineProperty(exports, "doesArrayContainsOneOrMore", { enumerable: true, get: function () { return doesArrayContainsOneOrMore_1.doesArrayContainsOneOrMore; } });
 const doesArrayContainsOneOrMoreObjects_1 = require("./doesArrayContainsOneOrMoreObjects");
 Object.defineProperty(exports, "doesArrayContainsOneOrMoreObjects", { enumerable: true, get: function () { return doesArrayContainsOneOrMoreObjects_1.doesArrayContainsOneOrMoreObjects; } });
+const generateRandomNumber_1 = require("./generateRandomNumber");
+Object.defineProperty(exports, "generateRandomNumber", { enumerable: true, get: function () { return generateRandomNumber_1.generateRandomNumber; } });
+const getRandomItemInArray_1 = require("./getRandomItemInArray");
+Object.defineProperty(exports, "getRandomItemInArray", { enumerable: true, get: function () { return getRandomItemInArray_1.getRandomItemInArray; } });
 const _x = {
     updateOrAddItemToArray: updateOrAddItemToArray_1.updateOrAddItemToArray,
     updateOrAddItemListToArray: updateOrAddItemListToArray_1.updateOrAddItemListToArray,
@@ -22,6 +26,8 @@ const _x = {
     generateRandomStringWithSections: generateRandomStringWithSections_1.generateRandomStringWithSections,
     removeItemFromArrayAtIndex: removeItemFromArrayAtIndex_1.removeItemFromArrayAtIndex,
     doesArrayContainsOneOrMore: doesArrayContainsOneOrMore_1.doesArrayContainsOneOrMore,
-    doesArrayContainsOneOrMoreObjects: doesArrayContainsOneOrMoreObjects_1.doesArrayContainsOneOrMoreObjects
+    doesArrayContainsOneOrMoreObjects: doesArrayContainsOneOrMoreObjects_1.doesArrayContainsOneOrMoreObjects,
+    generateRandomNumber: generateRandomNumber_1.generateRandomNumber,
+    getRandomItemInArray: getRandomItemInArray_1.getRandomItemInArray
 };
 exports.default = _x;

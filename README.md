@@ -174,6 +174,46 @@ console.log(randomString);
 ```
 ___
 
+### `getRandomItemInArray`
+This method returns a random item from the given array. If startIndex and/or endIndex are provided, the random item will be selected only from the range of indexes between startIndex and endIndex, inclusive. If startIndex is not provided, it defaults to 0. If endIndex is not provided, it defaults to the last index of the array.
+
+`getRandomItemInArray(startIndex?: number, endIndex?: number): T
+`
+
+Parameters:
+- `startIndex?: number (optional)` - The index of the array to start the range of random selection. Defaults to 0 if not provided.
+- `endIndex?: number (optional)` - The index of the array to end the range of random selection. Defaults to the last index of the array if not provided.
+
+Returns:
+A random item from the given array.
+
+Example
+``` typescript
+const array = [1, 2, 3, 4, 5];
+const randomItem = getRandomItemInArray(1, 3); // Returns a random item from the range of indexes between 1 and 3.
+```
+___
+
+### `generateRandomNumber`
+This method generates a random number between start and end, inclusive. If start is not provided, it defaults to 0. If end is not provided, it defaults to `Number.MAX_SAFE_INTEGER`. If `isFloat` is set to true, the generated number will be a floating point number with up to 2 decimal places.
+
+`generateRandomNumber(start?: number, end?: number, isFloat?: boolean): number
+`
+
+Parameters:
+- `start?: number (optional)` - The minimum value of the range to generate the random number from. Defaults to 0 if not provided.
+- `end?: number (optional)` - The maximum value of the range to generate the random number from. Defaults to `Number.MAX_SAFE_INTEGER` if not provided.
+- `isFloat?: boolean (optional)` - If set to true, the generated number will be a floating point number with up to 2 decimal places. Defaults to false if not provided.
+
+Returns:
+A random number between start and end, inclusive.
+
+Example
+``` typescript
+const randomNumber = generateRandomNumber(1, 10, true); // Returns a random floating point number between 1 and 10, with up to 2 decimal places.
+```
+___
+
 ## 🙌 Contributing
 If you have any suggestions for improving LodashX or if you found a bug, please don't hesitate to open an issue. Contributions are welcome!
 
