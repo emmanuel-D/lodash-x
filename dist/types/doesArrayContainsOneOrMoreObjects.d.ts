@@ -1,15 +1,17 @@
+import { NestedPaths } from "./types";
 /**
- * Check if an array of objects contains one or more elements based on a specific property.
- * @param array The array to search in.
- * @param elements The elements to search for.
- * @param keyToCompare The key or property to compare elements by.
- * @returns A boolean indicating whether the array contains one or more of the elements.
+ * Checks if the array contains one or more objects that match elements based on a specific key.
+ * Supports nested properties for comparison.
+ *
+ * @param array - The array to check.
+ * @param elements - The elements to look for in the array.
+ * @param keyToCompare - The key (or nested key) to compare the objects by.
+ * @returns True if the array contains one or more matching objects, false otherwise.
  *
  * @example
- * const array = [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }, { id: 3, name: 'Jim' }];
- * const elements = [{ id: 2, name: 'Jane' }, { id: 4, name: 'Jessica' }];
- * const keyToCompare = 'id';
- * const result = containsOneOrMoreObjects(array, elements, keyToCompare);
- * console.log(result); // Output: true
+ * const array = [{ id: 1, user: { profile: { id: 2 } } }];
+ * const elements = [{ id: 2, user: { profile: { id: 2 } } }];
+ * doesArrayContainsOneOrMoreObjects(array, elements, 'user.profile.id');
+ * // Output: true
  */
-export declare function doesArrayContainsOneOrMoreObjects<T>(array: T[], elements: T[], keyToCompare: keyof T): boolean;
+export declare function doesArrayContainsOneOrMoreObjects<T>(array: T[], elements: T[], keyToCompare: NestedPaths<T>): boolean;

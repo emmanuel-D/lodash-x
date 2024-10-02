@@ -1,37 +1,18 @@
+import { NestedPaths } from "./types";
 /**
- * Updates or adds items to an existing array.
+ * Updates or adds multiple items to an array based on a search property.
+ * Supports nested properties and immutability.
  *
- * This function works by iterating over the `newItemList` and passing each new item to the `updateOrAddItemToArray` function.
+ * @param array - The array to update or add to.
+ * @param newItemList - The list of new items to update or add.
+ * @param searchPropertyKey - The key (or nested key) of the property to search by (default: 'id').
+ * @param unshift - If true, adds new items to the start of the array (default: false).
+ * @returns A new array with the updated or added items.
  *
- * The `updateOrAddItemToArray` function is then used to update or add the new item to the `updatedArray` variable, which is initialized as a copy of the array argument.
- *
- * The final updated array is returned as the result of the function.
- *
- * ```
- * const array = [
- *     {id: 1, name: "John Doe"},
- *     {id: 2, name: "Jane Doe"}
- * ];
- *
- * const newItemList = [
- *     {id: 3, name: "Jack Doe"},
- *     {id: 1, name: "John Doe Updated"}
- * ];
- *
- * const updatedArray = updateOrAddItemListToArray(array, newItemList);
- *
- * console.log(updatedArray);
- * // Output: [
- * //  {id: 1, name: "John Doe Updated"},
- * //  {id: 2, name: "Jane Doe"},
- * //  {id: 3, name: "Jack Doe"}
- * // ]
- * ```
- *
- * @param {T[]} array - The existing array of items to update or add to.
- * @param {T[]} newItemList - The list of new items to add or update in the array.
- * @param {string} searchPropertyKey - The property key of the item object to use as the identifier for determining if an item is new or already exists in the array.
- *
- * @returns {T[]} A new array containing the updated or added items.
+ * @example
+ * const array = [{ id: 1, name: 'Item 1' }];
+ * const newItems = [{ id: 2, name: 'Item 2' }, { id: 1, name: 'Updated Item 1' }];
+ * const updatedArray = updateOrAddItemListToArray(array, newItems, 'id');
+ * // Output: [{ id: 1, name: 'Updated Item 1' }, { id: 2, name: 'Item 2' }]
  */
-export declare function updateOrAddItemListToArray<T>(array: T[], newItemList: T[], searchPropertyKey?: string): T[];
+export declare function updateOrAddItemListToArray<T>(array: T[], newItemList: T[], searchPropertyKey: NestedPaths<T>, unshift?: boolean): T[];
