@@ -27,6 +27,9 @@ import {reParse} from "./reParse";
 import {toString} from "./toString";
 import {updateImmutable} from "./updateImmutable";
 import {waitFor} from "./waitFor";
+import {getStringPropertyKey} from "./getStringPropertyKey";
+import {getStringPropertyKeys} from "./getStringPropertyKeys";
+import {noop} from "./noop";
 
 export { asyncMapParallel };
 export { asyncMapSequential };
@@ -41,9 +44,12 @@ export { generateRandomStringWithSections };
 export { getAvatarInitials };
 export { getFullName };
 export { getRandomItemInArray };
+export { getStringPropertyKey };
+export { getStringPropertyKeys };
 export { getUsernameBackgroundColor };
 export { getValueByPath };
 export { maskString };
+export { noop };
 export { onceStrict };
 export { parseJSONSafe };
 export { prettyPrintJSON };
@@ -72,9 +78,12 @@ const _x = {
     getAvatarInitials,
     getFullName,
     getRandomItemInArray,
+    getStringPropertyKey,
+    getStringPropertyKeys,
     getUsernameBackgroundColor,
     getValueByPath,
     maskString,
+    noop,
     onceStrict,
     parseJSONSafe,
     prettyPrintJSON,
