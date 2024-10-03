@@ -1,5 +1,6 @@
 /**
  * Returns initials for an avatar, based on the given username.
+ * If a single word is provided (like 'John'), it returns the specified number of characters.
  * The default is 2 characters, but this can be customized.
  *
  * @param username - The username from which to generate initials

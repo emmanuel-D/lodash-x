@@ -1,5 +1,6 @@
 /**
  * Returns initials for an avatar, based on the given username.
+ * If a single word is provided (like 'John'), it returns the specified number of characters.
  * The default is 2 characters, but this can be customized.
  *
  * @param username - The username from which to generate initials
@@ -18,9 +19,15 @@ export const getAvatarInitials = (username?: string, length: number = 2): string
     // Split the username into words by spaces and take the first character of each word
     const words = username.trim().split(/\s+/);
 
-    // Combine the first letter of each word to form the initials
-    const initials = words.map(word => word[0].toUpperCase()).join('');
+    let initials = '';
 
-    // Return only the requested number of characters
-    return initials.slice(0, length);
+    // If there's only one word, take the first 'length' characters from it
+    if (words.length === 1) {
+        initials = words[0].slice(0, length).toUpperCase();
+    } else {
+        // Otherwise, take the first letter of each word, and limit to 'length' characters
+        initials = words.map(word => word[0].toUpperCase()).join('').slice(0, length);
+    }
+
+    return initials;
 };

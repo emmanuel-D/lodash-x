@@ -1,6 +1,6 @@
 {
   "name": "@manu_omg/lodash-x",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "\"LodashX\" - A powerful and versatile extension package for Lodash, the popular JavaScript utility library. LodashX expands on Lodash's already impressive capabilities, providing a comprehensive set of utility functions for everyday programming tasks. Whether you're working on a small project or a large-scale enterprise application, LodashX has you covered with a wide range of functions for manipulating arrays, objects, strings, and more. With a concise, readable syntax and an intuitive API, LodashX makes it easy to write clean and efficient code, no matter your skill level. Get started with LodashX today and take your programming to the next level!",
   "main": "dist/index.js",
   "types": "./dist/types/index.d.ts",
