@@ -15,6 +15,8 @@ exports.underscoreToNormal = void 0;
  * console.log(underscoreToNormal('underscore_separated_string', true)); // Output: 'Underscore Separated String'
  */
 const underscoreToNormal = (str, capitalizeAll = false) => {
+    if (!str)
+        return ''; // Handle null or undefined by returning an empty string
     const result = str
         .toLowerCase() // Convert the entire string to lowercase
         .replace(/_/g, ' ') // Replace underscores with spaces

@@ -12,6 +12,8 @@ exports.camelToUnderscore = void 0;
  * console.log(camelToUnderscore('camelCaseString')); // Output: 'camel_case_string'
  */
 const camelToUnderscore = (str) => {
+    if (!str)
+        return ''; // Handle null or undefined by returning an empty string
     return str
         .replace(/([a-z])([A-Z])/g, '$1_$2') // Insert underscore before capital letters
         .toLowerCase(); // Convert the entire string to lowercase

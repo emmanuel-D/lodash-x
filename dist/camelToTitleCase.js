@@ -11,6 +11,8 @@ exports.camelToTitleCase = void 0;
  * console.log(camelToTitleCase('camelCaseString')); // Output: 'Camel Case String'
  */
 const camelToTitleCase = (str) => {
+    if (!str)
+        return ''; // Handle null or undefined by returning an empty string
     return str
         .replace(/([a-z])([A-Z])/g, '$1 $2') // Insert space before capital letters
         .replace(/^./, char => char.toUpperCase()); // Capitalize the first letter

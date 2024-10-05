@@ -92,7 +92,6 @@ declare const _x: {
     getStringPropertyKey: <T_4 extends object, K extends keyof T_4>(key: K) => K;
     getStringPropertyKeys: <T_5 extends object, K_1 extends keyof T_5>(keys: K_1[]) => K_1[];
     getUsernameBackgroundColor: (username: string) => string;
-    // @ts-ignore
     getValueByPath: <T_6, P extends import("./types").NestedPaths<T_6>>(obj: T_6, path: P) => P extends import("./types").NestedPaths<T_6> ? any : undefined;
     maskString: (str: string, options?: {
         start?: number | undefined;
