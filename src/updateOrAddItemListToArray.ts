@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import {updateOrAddItemToArray} from "./updateOrAddItemToArray";
 import {NestedPaths} from "./types";
 

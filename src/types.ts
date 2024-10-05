@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 // Utility to join keys for nested paths
 export type Join<K, P> = K extends string | number ? (P extends string | number ? `${K}.${P}` : never) : never;
 

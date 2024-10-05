@@ -30,44 +30,56 @@ import {waitFor} from "./waitFor";
 import {getStringPropertyKey} from "./getStringPropertyKey";
 import {getStringPropertyKeys} from "./getStringPropertyKeys";
 import {noop} from "./noop";
+import {camelToTitleCase} from "./camelToTitleCase";
+import {camelToUnderscore} from "./camelToUnderscore";
+import {objectKeysToCamelCase} from "./objectKeysToCamelCase";
+import {objectKeysToUnderscoreCase} from "./objectKeysToUnderscoreCase";
+import {underscoreToNormal} from "./underscoreToNormal";
 
-export { asyncMapParallel };
-export { asyncMapSequential };
-export { autoRetry };
-export { debounceWithImmediate };
-export { deepMergeSafe };
-export { doesArrayContainsOneOrMore };
-export { doesArrayContainsOneOrMoreObjects };
-export { generateRandomAlphaNumericString };
-export { generateRandomNumber };
-export { generateRandomStringWithSections };
-export { getAvatarInitials };
-export { getFullName };
-export { getRandomItemInArray };
-export { getStringPropertyKey };
-export { getStringPropertyKeys };
-export { getUsernameBackgroundColor };
-export { getValueByPath };
-export { maskString };
-export { noop };
-export { onceStrict };
-export { parseJSONSafe };
-export { prettyPrintJSON };
-export { reParse };
-export { removeItemFromArrayAtIndex };
-export { resolvePromisesWithResults };
-export { sleep };
-export { swapKeysValues };
-export { toString };
-export { updateImmutable };
-export { updateOrAddItemListToArray };
-export { updateOrAddItemToArray };
-export { waitFor };
+export {asyncMapParallel};
+export {asyncMapSequential};
+export {autoRetry};
+export {camelToTitleCase};
+export {camelToUnderscore};
+export {debounceWithImmediate};
+export {deepMergeSafe};
+export {doesArrayContainsOneOrMore};
+export {doesArrayContainsOneOrMoreObjects};
+export {generateRandomAlphaNumericString};
+export {generateRandomNumber};
+export {generateRandomStringWithSections};
+export {getAvatarInitials};
+export {getFullName};
+export {getRandomItemInArray};
+export {getStringPropertyKey};
+export {getStringPropertyKeys};
+export {getUsernameBackgroundColor};
+export {getValueByPath};
+export {maskString};
+export {noop};
+export {objectKeysToCamelCase};
+export {objectKeysToUnderscoreCase};
+export {onceStrict};
+export {parseJSONSafe};
+export {prettyPrintJSON};
+export {reParse};
+export {removeItemFromArrayAtIndex};
+export {resolvePromisesWithResults};
+export {sleep};
+export {swapKeysValues};
+export {toString};
+export {underscoreToNormal};
+export {updateImmutable};
+export {updateOrAddItemListToArray};
+export {updateOrAddItemToArray};
+export {waitFor};
 
 const _x = {
     asyncMapParallel,
     asyncMapSequential,
     autoRetry,
+    camelToTitleCase,
+    camelToUnderscore,
     debounceWithImmediate,
     deepMergeSafe,
     doesArrayContainsOneOrMore,
@@ -84,6 +96,8 @@ const _x = {
     getValueByPath,
     maskString,
     noop,
+    objectKeysToCamelCase,
+    objectKeysToUnderscoreCase,
     onceStrict,
     parseJSONSafe,
     prettyPrintJSON,
@@ -93,6 +107,7 @@ const _x = {
     sleep,
     swapKeysValues,
     toString,
+    underscoreToNormal,
     updateImmutable,
     updateOrAddItemListToArray,
     updateOrAddItemToArray,
